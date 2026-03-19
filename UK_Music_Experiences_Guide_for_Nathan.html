@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK Music Experiences - Website Guide for Nathan</title>
+<style>
+  @page {
+    size: A4;
+    margin: 2cm 2.5cm;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 11.5pt;
+    line-height: 1.7;
+    color: #1a1a1a;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2cm 1.5cm;
+    background: #fff;
+  }
+
+  /* Cover / Title */
+  .cover {
+    text-align: center;
+    padding: 3cm 0 2cm;
+    page-break-after: always;
+    border-bottom: none;
+  }
+  .cover h1 {
+    font-size: 28pt;
+    font-weight: 700;
+    color: #1a3a5c;
+    margin-bottom: 0.3cm;
+    line-height: 1.2;
+  }
+  .cover .subtitle {
+    font-size: 14pt;
+    color: #4a6a8a;
+    font-style: italic;
+    margin-bottom: 2cm;
+  }
+  .cover .meta {
+    font-size: 10pt;
+    color: #666;
+    line-height: 1.8;
+  }
+  .cover .divider {
+    width: 80px;
+    height: 3px;
+    background: #4FC3F7;
+    margin: 1.5cm auto;
+  }
+  .cover .note {
+    font-size: 9.5pt;
+    color: #888;
+    margin-top: 1cm;
+    font-style: italic;
+  }
+
+  /* Headings */
+  h2 {
+    font-size: 18pt;
+    color: #1a3a5c;
+    margin-top: 1.5cm;
+    margin-bottom: 0.4cm;
+    padding-bottom: 0.2cm;
+    border-bottom: 2px solid #4FC3F7;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 13pt;
+    color: #2a5a7a;
+    margin-top: 0.8cm;
+    margin-bottom: 0.3cm;
+    page-break-after: avoid;
+  }
+  h4 {
+    font-size: 11.5pt;
+    color: #3a6a8a;
+    margin-top: 0.5cm;
+    margin-bottom: 0.2cm;
+  }
+
+  /* Body */
+  p {
+    margin-bottom: 0.4cm;
+    text-align: justify;
+  }
+  ul, ol {
+    margin-bottom: 0.4cm;
+    padding-left: 1.2cm;
+  }
+  li {
+    margin-bottom: 0.15cm;
+  }
+
+  /* Info boxes */
+  .info-box {
+    background: #f0f7ff;
+    border-left: 4px solid #4FC3F7;
+    padding: 0.5cm 0.7cm;
+    margin: 0.5cm 0;
+    border-radius: 0 6px 6px 0;
+    page-break-inside: avoid;
+  }
+  .info-box.green {
+    background: #f0fff4;
+    border-left-color: #48bb78;
+  }
+  .info-box.yellow {
+    background: #fffff0;
+    border-left-color: #ecc94b;
+  }
+  .info-box.purple {
+    background: #f8f0ff;
+    border-left-color: #9f7aea;
+  }
+  .info-box p:last-child { margin-bottom: 0; }
+
+  /* Cost table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5cm 0;
+    font-size: 10.5pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #d0d0d0;
+    padding: 0.25cm 0.4cm;
+    text-align: left;
+  }
+  th {
+    background: #1a3a5c;
+    color: #fff;
+    font-weight: 600;
+  }
+  tr:nth-child(even) { background: #f8f8f8; }
+
+  /* Comparison cards */
+  .comparison {
+    display: flex;
+    gap: 0.5cm;
+    margin: 0.5cm 0;
+    page-break-inside: avoid;
+  }
+  .comparison .card {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.5cm;
+    page-break-inside: avoid;
+  }
+  .comparison .card h4 {
+    margin-top: 0;
+    text-align: center;
+    padding-bottom: 0.2cm;
+    border-bottom: 1px solid #eee;
+  }
+  .comparison .card.recommended {
+    border-color: #4FC3F7;
+    border-width: 2px;
+    background: #f8fcff;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 2cm;
+    padding-top: 0.5cm;
+    border-top: 1px solid #ddd;
+    font-size: 9pt;
+    color: #888;
+    text-align: center;
+  }
+
+  /* Print tweaks */
+  @media print {
+    body { padding: 0; max-width: none; }
+    .cover { padding-top: 5cm; }
+    h2 { margin-top: 1cm; }
+  }
+
+  /* Analogy callout */
+  .analogy {
+    background: #fff8e1;
+    border: 1px dashed #f9a825;
+    border-radius: 8px;
+    padding: 0.4cm 0.6cm;
+    margin: 0.4cm 0;
+    font-style: italic;
+    page-break-inside: avoid;
+  }
+  .analogy::before {
+    content: "Think of it like this: ";
+    font-weight: bold;
+    font-style: normal;
+    color: #f57f17;
+  }
+
+  .toc {
+    page-break-after: always;
+  }
+  .toc ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .toc li {
+    padding: 0.15cm 0;
+    border-bottom: 1px dotted #ccc;
+  }
+  .toc li span.page {
+    float: right;
+    color: #888;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== COVER ==================== -->
+<div class="cover">
+  <h1>UK Music Experiences</h1>
+  <p class="subtitle">A Guide to Building an Interactive Music Opportunities Website</p>
+  <div class="divider"></div>
+  <p class="meta">
+    Prepared for <strong>Nathan</strong><br>
+    March 2026
+  </p>
+  <p class="meta" style="margin-top: 1cm;">
+    This document answers your questions about:<br>
+    <strong>What technology is needed? What infrastructure? How much does it cost?</strong>
+  </p>
+  <p class="meta" style="margin-top: 0.8cm;">
+    It also walks through the working prototype we built<br>
+    as a practical example of one way to do this.
+  </p>
+  <p class="note">
+    This document was generated by Claude Code (Anthropic's AI coding assistant)<br>
+    based on the prototype built by Robert.
+  </p>
+</div>
+
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<div class="toc">
+  <h2 style="border-bottom: none; margin-top: 0;">Contents</h2>
+  <ul>
+    <li><strong>1. The Short Answer</strong> &mdash; A quick summary for your grant application</li>
+    <li><strong>2. What Is a Website, Really?</strong> &mdash; The basics, explained without jargon</li>
+    <li><strong>3. Our Prototype: How It Works</strong> &mdash; A tour of the website we built</li>
+    <li><strong>4. How We Built It</strong> &mdash; The technology behind the prototype, step by step</li>
+    <li><strong>5. What You Need to Run a Website</strong> &mdash; Infrastructure, hosting, domains</li>
+    <li><strong>6. Costs: A Realistic Breakdown</strong> &mdash; What things actually cost</li>
+    <li><strong>7. Other Ways to Build This</strong> &mdash; WordPress, Google Maps, no-code tools, and more</li>
+    <li><strong>8. Keeping the Data Up to Date</strong> &mdash; How to add or change opportunities</li>
+    <li><strong>9. Recommendations</strong> &mdash; What we'd suggest for your situation</li>
+    <li><strong>10. Glossary</strong> &mdash; Technical terms translated to plain English</li>
+  </ul>
+</div>
+
+<!-- ==================== 1. THE SHORT ANSWER ==================== -->
+<h2>1. The Short Answer</h2>
+
+<p>Before we dive into the details, here's the quick version for your grant application:</p>
+
+<div class="info-box green">
+  <p><strong>Yes, you can build a website with an interactive map showing UK music opportunities. Here's what you need:</strong></p>
+  <ul>
+    <li><strong>Technology cost:</strong> Potentially &pound;0. All the tools we used are free and open-source.</li>
+    <li><strong>Hosting cost:</strong> Between &pound;0 and &pound;150/year, depending on the option you choose.</li>
+    <li><strong>Domain name:</strong> About &pound;10&ndash;15/year (e.g., ukmusicexperiences.co.uk).</li>
+    <li><strong>Development cost:</strong> This is the main expense &mdash; paying someone to build and set it up. With &pound;1,000 budget, it's tight but possible if you find the right person or approach.</li>
+  </ul>
+</div>
+
+<p>We've already built a working prototype that proves the concept. It shows 918 music opportunities on an interactive map of the UK, with search, filtering, and distance-based lookup. It works entirely in the browser &mdash; no ongoing server costs required.</p>
+
+<!-- ==================== 2. WHAT IS A WEBSITE ==================== -->
+<h2>2. What Is a Website, Really?</h2>
+
+<p>Before we talk about how we built yours, it helps to understand what a website actually is. Don't worry &mdash; we'll keep this simple.</p>
+
+<h3>The Three Ingredients of Any Website</h3>
+
+<div class="analogy">
+  A website is like a concert. You need three things: the music itself (the files), a venue to perform it in (a server/host), and an address so people can find the venue (a domain name).</div>
+
+<ol>
+  <li>
+    <strong>The Files</strong> &mdash; Every website is made up of files, just like documents on your computer. These files contain the text, images, layout instructions, and interactive behaviour of your website. When someone visits your site, these files get sent to their browser (Chrome, Safari, Firefox, etc.), which then displays them as the page you see.
+  </li>
+  <li>
+    <strong>A Host (Server)</strong> &mdash; Your files need to live somewhere that's accessible to the internet 24/7. This is called "hosting". Think of it as renting a small space on a computer that's always turned on and connected to the internet. When someone types in your web address, they're actually connecting to that computer, which sends them your files.
+  </li>
+  <li>
+    <strong>A Domain Name</strong> &mdash; This is the web address people type in, like <em>ukmusicexperiences.co.uk</em>. Without it, your site would only be reachable via a long number (like a phone number). A domain name is the human-friendly label.
+  </li>
+</ol>
+
+<h3>Two Types of Websites</h3>
+
+<p>This is an important distinction that affects cost, complexity, and what's possible:</p>
+
+<div class="comparison">
+  <div class="card recommended">
+    <h4>Static Website</h4>
+    <p>Like a printed brochure &mdash; the content is pre-made and the same for everyone. The browser does all the work.</p>
+    <p><strong>Pros:</strong> Fast, cheap/free to host, very secure, simple.</p>
+    <p><strong>Cons:</strong> Updating content requires someone with a bit of technical knowledge (or a build step).</p>
+    <p><strong>Our prototype is this type.</strong></p>
+  </div>
+  <div class="card">
+    <h4>Dynamic Website</h4>
+    <p>Like a live performance &mdash; the server builds each page on the fly, often pulling from a database.</p>
+    <p><strong>Pros:</strong> Easy content management (like WordPress), user accounts, real-time features.</p>
+    <p><strong>Cons:</strong> Needs a server running 24/7 (costs more), more complex, potential security issues.</p>
+    <p><strong>WordPress sites are this type.</strong></p>
+  </div>
+</div>
+
+<div class="analogy">
+  A static website is like a CD &mdash; the music is already recorded and plays the same every time. A dynamic website is like a live band &mdash; it creates the experience fresh each time someone visits, which is more flexible but requires more infrastructure.</div>
+
+<!-- ==================== 3. OUR PROTOTYPE ==================== -->
+<h2>3. Our Prototype: How It Works</h2>
+
+<p>We built a working prototype to show what's possible. Here's what it does:</p>
+
+<h3>The Interactive Map</h3>
+<p>The centrepiece of the website is a full interactive map of the UK, powered by <strong>OpenStreetMap</strong> (a free, open-source mapping service &mdash; think of it as the Wikipedia of maps). Every music opportunity from your spreadsheet appears as a pin on the map.</p>
+
+<p>Each type of opportunity has its own unique icon:</p>
+<ul>
+  <li>Classes, Workshops, Ensembles, Projects</li>
+  <li>Instrument Lessons, Mentoring, Music Centres</li>
+  <li>Performance Opportunities, Grants/Funds</li>
+  <li>Networks, Radio, Work Experience</li>
+</ul>
+
+<p>When you click on a pin, a popup appears showing all the details: the opportunity name, type, location, genre, age range, cost, and a link to the organisation's website.</p>
+
+<h3>The Search &amp; Filter System</h3>
+<p>Above the map, there are search controls that let visitors:</p>
+<ul>
+  <li><strong>Search by name</strong> &mdash; type any word and it filters instantly</li>
+  <li><strong>Filter by type</strong> &mdash; e.g., show only "Workshops" or only "Ensembles"</li>
+  <li><strong>Filter by region</strong> &mdash; e.g., show only "South West" or "Scotland"</li>
+  <li><strong>Search by proximity</strong> &mdash; type an address (e.g., "Bristol") and a radius (e.g., 25 km), and it shows only opportunities within that distance, sorted by how close they are</li>
+</ul>
+
+<h3>The Table View</h3>
+<p>Next to the map, there's a table listing all the matching opportunities. The table and map are linked &mdash; hovering over a row in the table highlights the corresponding pin on the map, and clicking a row makes the map fly to that location.</p>
+
+<h3>How Many Opportunities?</h3>
+<p>The prototype currently displays <strong>918 music opportunities</strong> across the UK, all loaded from your original spreadsheet data.</p>
+
+<!-- ==================== 4. HOW WE BUILT IT ==================== -->
+<h2>4. How We Built It</h2>
+
+<p>This section explains the technology we used. Don't worry about memorising the names &mdash; the point is to show you that everything we used is <strong>free</strong> and <strong>well-established</strong>.</p>
+
+<h3>Step 1: The Foundation &mdash; React + TypeScript</h3>
+
+<div class="analogy">
+  If building a website is like writing a piece of music, then React is like your notation software (Sibelius, Finale). It's a tool that helps you organise and structure your work efficiently. TypeScript is like having a proofreader who catches wrong notes before you perform.</div>
+
+<p><strong>React</strong> is a free tool made by Meta (Facebook) that helps developers build interactive websites. It's used by millions of websites worldwide, including Instagram, Netflix, and Airbnb. It's the industry standard for building modern web interfaces.</p>
+
+<p><strong>TypeScript</strong> is an extension of JavaScript (the programming language that makes websites interactive) that helps catch errors before they cause problems. Think of it as spell-check for code.</p>
+
+<p><strong>Vite</strong> (pronounced "veet") is the build tool that packages everything together. It takes all our code and turns it into the files that a web browser can understand.</p>
+
+<h3>Step 2: The Map &mdash; Leaflet + OpenStreetMap</h3>
+
+<p><strong>Leaflet</strong> is a free, open-source map library. It's the code that makes the map interactive &mdash; letting users zoom, pan, click on markers, and see popups. It's used by thousands of websites, including government portals, news organisations, and non-profits.</p>
+
+<p><strong>OpenStreetMap</strong> provides the actual map images (the roads, terrain, labels). It's completely free and community-maintained. We specifically use a style called "CartoDB Light" which gives a clean, light-coloured map that doesn't distract from the data pins.</p>
+
+<p>No API key, no subscription, no payment needed for either of these.</p>
+
+<h3>Step 3: Turning Addresses into Map Pins &mdash; Geocoding</h3>
+
+<p>Your spreadsheet has addresses like "Bristol" or "Manchester Town Hall" &mdash; but a map needs exact coordinates (latitude and longitude numbers). The process of converting an address into coordinates is called <strong>geocoding</strong>.</p>
+
+<p>We used <strong>Nominatim</strong>, which is OpenStreetMap's free geocoding service. We wrote a script that went through every unique address in your data, looked up its coordinates, and saved the results. This only needs to happen once &mdash; after that, the coordinates are stored and the map pins appear instantly.</p>
+
+<div class="info-box">
+  <p><strong>Key point:</strong> Geocoding was the trickiest part of the build. Out of your ~918 entries that had location data in the KML file, we successfully mapped all of them. Some addresses were too vague for the geocoder to find, so in a production version, you might want to manually check the ones that got placed in the wrong spot.</p>
+</div>
+
+<h3>Step 4: The Data Pipeline</h3>
+
+<p>Here's how your spreadsheet data becomes a working website:</p>
+
+<ol>
+  <li><strong>Your Google Sheet</strong> &rarr; exported as CSV (spreadsheet format) and KML (map format)</li>
+  <li><strong>Our geocoding script</strong> &rarr; reads the data, looks up coordinates for each address</li>
+  <li><strong>A JSON file</strong> &rarr; all 918 opportunities with their coordinates, stored in a structured format the website can read</li>
+  <li><strong>The website</strong> &rarr; loads this file when someone visits, displays everything on the map and in the table</li>
+</ol>
+
+<div class="analogy">
+  It's like preparing sheet music for a concert. Your spreadsheet is the handwritten score. We transcribed it into a clean digital format (JSON), and now the website can "perform" it for anyone who visits.</div>
+
+<h3>Step 5: Search, Filters, and Distance</h3>
+
+<p>The search and filter system works entirely in the visitor's browser. When someone types a search term, the website instantly goes through all 918 opportunities and shows only the matching ones. No server needed &mdash; it's all done locally.</p>
+
+<p>For the proximity search (finding opportunities near a specific location), we use a mathematical formula called the <strong>Haversine formula</strong> to calculate the distance between two points on the Earth. It's the same maths that sat-nav systems use.</p>
+
+<!-- ==================== 5. INFRASTRUCTURE ==================== -->
+<h2>5. What You Need to Run a Website</h2>
+
+<h3>Hosting Options</h3>
+
+<p>Because our prototype is a <strong>static website</strong> (no server-side processing needed), you have some very affordable hosting options:</p>
+
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Cost</th>
+    <th>Difficulty</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td><strong>GitHub Pages</strong></td>
+    <td>Free</td>
+    <td>Low (with help)</td>
+    <td>Free hosting by GitHub. Ideal for this type of project. Supports custom domains. Used by millions of projects.</td>
+  </tr>
+  <tr>
+    <td><strong>Netlify</strong></td>
+    <td>Free</td>
+    <td>Low</td>
+    <td>Drag-and-drop deployment. Very beginner-friendly. Free tier is generous.</td>
+  </tr>
+  <tr>
+    <td><strong>Vercel</strong></td>
+    <td>Free</td>
+    <td>Low</td>
+    <td>Similar to Netlify. Made by the creators of a popular web framework.</td>
+  </tr>
+  <tr>
+    <td><strong>Cloudflare Pages</strong></td>
+    <td>Free</td>
+    <td>Low</td>
+    <td>Very fast global delivery. Generous free tier.</td>
+  </tr>
+  <tr>
+    <td><strong>Traditional web hosting</strong></td>
+    <td>&pound;30&ndash;150/year</td>
+    <td>Medium</td>
+    <td>Companies like 123 Reg, GoDaddy, Ionos. More than you need for a static site, but some people prefer having a "proper" hosting account.</td>
+  </tr>
+</table>
+
+<div class="info-box green">
+  <p><strong>Bottom line:</strong> Hosting a static website like ours can be completely free. The free options (GitHub Pages, Netlify, Vercel, Cloudflare Pages) are not inferior &mdash; they're actually faster and more reliable than cheap traditional hosting because they use global content delivery networks.</p>
+</div>
+
+<h3>Domain Name</h3>
+
+<p>A domain name like <em>ukmusicexperiences.co.uk</em> costs about <strong>&pound;10&ndash;15 per year</strong>. You can register one through services like:</p>
+<ul>
+  <li>Namecheap (&pound;8&ndash;12/year for .co.uk)</li>
+  <li>Google Domains (now Squarespace Domains)</li>
+  <li>123 Reg</li>
+  <li>GoDaddy</li>
+</ul>
+<p>Without a custom domain, you'd still have a working website &mdash; just with an address like <em>ukmusicexperiences.netlify.app</em> or <em>yourusername.github.io/uk-music-experiences</em>, which is perfectly fine for a prototype or grant demonstration.</p>
+
+<h3>SSL Certificate (the padlock icon)</h3>
+<p>All the free hosting options above include free SSL certificates, which means your site will show the little padlock icon in the browser address bar and use "https://". This is important for trust and is nowadays expected by visitors. No extra cost or setup needed.</p>
+
+<!-- ==================== 6. COSTS ==================== -->
+<h2>6. Costs: A Realistic Breakdown</h2>
+
+<h3>Technology Costs (the tools themselves)</h3>
+
+<table>
+  <tr>
+    <th>Technology</th>
+    <th>Cost</th>
+    <th>What It Does</th>
+  </tr>
+  <tr>
+    <td>React</td>
+    <td>Free (open source)</td>
+    <td>The framework for building the website interface</td>
+  </tr>
+  <tr>
+    <td>TypeScript</td>
+    <td>Free (open source)</td>
+    <td>Makes the code more reliable</td>
+  </tr>
+  <tr>
+    <td>Vite</td>
+    <td>Free (open source)</td>
+    <td>Builds and bundles the website files</td>
+  </tr>
+  <tr>
+    <td>Leaflet</td>
+    <td>Free (open source)</td>
+    <td>The interactive map component</td>
+  </tr>
+  <tr>
+    <td>OpenStreetMap tiles</td>
+    <td>Free</td>
+    <td>The actual map images</td>
+  </tr>
+  <tr>
+    <td>Nominatim geocoding</td>
+    <td>Free</td>
+    <td>Turns addresses into map coordinates</td>
+  </tr>
+  <tr>
+    <td><strong>Total technology cost</strong></td>
+    <td><strong>&pound;0</strong></td>
+    <td></td>
+  </tr>
+</table>
+
+<h3>Infrastructure Costs (yearly)</h3>
+
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Minimum</th>
+    <th>Comfortable</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>Hosting</td>
+    <td>&pound;0</td>
+    <td>&pound;0</td>
+    <td>Free via Netlify, GitHub Pages, etc.</td>
+  </tr>
+  <tr>
+    <td>Domain name</td>
+    <td>&pound;0 (use free subdomain)</td>
+    <td>&pound;10&ndash;15</td>
+    <td>Optional but recommended for professionalism</td>
+  </tr>
+  <tr>
+    <td>SSL certificate</td>
+    <td>&pound;0</td>
+    <td>&pound;0</td>
+    <td>Included free with all the hosting options above</td>
+  </tr>
+  <tr>
+    <td><strong>Total yearly</strong></td>
+    <td><strong>&pound;0</strong></td>
+    <td><strong>&pound;10&ndash;15</strong></td>
+    <td></td>
+  </tr>
+</table>
+
+<h3>Development Costs (one-off)</h3>
+
+<p>This is where the real cost lies. Someone needs to actually build the website, and that requires specialist knowledge. Here are realistic ranges:</p>
+
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Estimated Cost</th>
+    <th>What You Get</th>
+  </tr>
+  <tr>
+    <td>A friend/contact who codes (like Robert)</td>
+    <td>&pound;0&ndash;500</td>
+    <td>Depends on the relationship and scope. Our prototype was built this way.</td>
+  </tr>
+  <tr>
+    <td>University student / junior freelancer</td>
+    <td>&pound;300&ndash;800</td>
+    <td>Might take longer, but enthusiastic. Good for a project like this.</td>
+  </tr>
+  <tr>
+    <td>Professional freelance developer</td>
+    <td>&pound;1,000&ndash;3,000</td>
+    <td>Polished result, but likely exceeds the &pound;1,000 grant budget for a full build.</td>
+  </tr>
+  <tr>
+    <td>Web development agency</td>
+    <td>&pound;3,000&ndash;10,000+</td>
+    <td>Full service with design, development, and support. Well beyond budget.</td>
+  </tr>
+  <tr>
+    <td>No-code / WordPress approach</td>
+    <td>&pound;100&ndash;500</td>
+    <td>Using existing tools and plugins. Less custom but potentially good enough.</td>
+  </tr>
+  <tr>
+    <td>AI-assisted development (like this prototype)</td>
+    <td>&pound;20&ndash;50 (AI subscription)</td>
+    <td>Someone with basic tech skills uses AI tools to build it. The future of small projects like this.</td>
+  </tr>
+</table>
+
+<div class="info-box yellow">
+  <p><strong>With a &pound;1,000 grant:</strong> After subtracting ~&pound;15 for a domain name, you'd have roughly &pound;985 for development. This is tight for a professional developer, but very achievable if you find a student, a junior freelancer, or someone willing to use AI-assisted development. The prototype we built proves that the technical side is entirely doable.</p>
+</div>
+
+<!-- ==================== 7. OTHER APPROACHES ==================== -->
+<h2>7. Other Ways to Build This</h2>
+
+<p>Our prototype used React + Leaflet, but there are several other approaches. Each has trade-offs:</p>
+
+<h3>Option A: WordPress + Map Plugin</h3>
+
+<div class="info-box">
+  <p><strong>What it is:</strong> WordPress is the world's most popular website builder. It powers about 40% of all websites. You can add a map plugin to display your data.</p>
+</div>
+
+<p><strong>How it works:</strong> You install WordPress (many hosting providers do this with one click), choose a theme (the visual design), and install a map plugin like "WP Go Maps" (formerly WP Google Maps) or "MapPress". You'd import your spreadsheet data through the plugin's interface.</p>
+
+<p><strong>Pros:</strong></p>
+<ul>
+  <li>You can update content yourself without coding knowledge</li>
+  <li>Huge ecosystem of themes and plugins</li>
+  <li>Lots of people know WordPress, so easy to find help</li>
+</ul>
+
+<p><strong>Cons:</strong></p>
+<ul>
+  <li>Needs traditional hosting (not free) &mdash; typically &pound;50&ndash;100/year</li>
+  <li>Map plugins may have limitations (e.g., max number of pins on the free version)</li>
+  <li>Slower than a static site</li>
+  <li>Requires ongoing maintenance (WordPress updates, security patches)</li>
+  <li>Some map plugins require a paid Google Maps API key</li>
+</ul>
+
+<p><strong>Estimated cost:</strong> &pound;50&ndash;200/year for hosting, &pound;0&ndash;80/year for premium plugins, plus development time.</p>
+
+<h3>Option B: Google My Maps</h3>
+
+<div class="info-box">
+  <p><strong>What it is:</strong> Google's free tool for creating custom maps. You can import your spreadsheet directly and get a map with pins.</p>
+</div>
+
+<p><strong>Pros:</strong></p>
+<ul>
+  <li>Completely free</li>
+  <li>Very easy &mdash; you could do this yourself in an afternoon</li>
+  <li>Can be embedded in any website</li>
+  <li>Google handles all the technical infrastructure</li>
+</ul>
+
+<p><strong>Cons:</strong></p>
+<ul>
+  <li>Limited customisation &mdash; looks like a Google product, not your brand</li>
+  <li>No advanced filtering or search (just basic categories)</li>
+  <li>Limited to 2,000 points per layer (you have ~918, so this is fine for now)</li>
+  <li>No table view or proximity search</li>
+  <li>Depends entirely on Google &mdash; if they change or discontinue the service, you're affected</li>
+</ul>
+
+<p><strong>Estimated cost:</strong> &pound;0</p>
+
+<h3>Option C: Squarespace / Wix + Embedded Map</h3>
+
+<div class="info-box">
+  <p><strong>What it is:</strong> Website builders with drag-and-drop interfaces. You'd create a website and embed a map (either Google My Maps or a third-party map widget).</p>
+</div>
+
+<p><strong>Pros:</strong></p>
+<ul>
+  <li>Beautiful, professional-looking templates</li>
+  <li>No coding required &mdash; entirely visual editing</li>
+  <li>Built-in hosting and domain management</li>
+</ul>
+
+<p><strong>Cons:</strong></p>
+<ul>
+  <li>Monthly subscription: &pound;12&ndash;30/month (&pound;144&ndash;360/year)</li>
+  <li>The map part would still be basic (an embed from Google My Maps or similar)</li>
+  <li>You can't build the rich interactive features we have (proximity search, linked table, type-based icons)</li>
+</ul>
+
+<p><strong>Estimated cost:</strong> &pound;144&ndash;360/year</p>
+
+<h3>Option D: Mapbox or Google Maps Platform (Custom Development)</h3>
+
+<div class="info-box">
+  <p><strong>What it is:</strong> Professional mapping platforms with more features than OpenStreetMap, but with usage-based pricing.</p>
+</div>
+
+<p><strong>Pros:</strong></p>
+<ul>
+  <li>Very polished, professional map styles</li>
+  <li>Better geocoding accuracy</li>
+  <li>More customisation options</li>
+</ul>
+
+<p><strong>Cons:</strong></p>
+<ul>
+  <li>Free tier has limits (Mapbox: 50,000 map loads/month free; Google: $200/month credit)</li>
+  <li>Can get expensive if the site becomes popular</li>
+  <li>Requires an API key and account management</li>
+  <li>Still needs a developer to build the website around it</li>
+</ul>
+
+<p><strong>Estimated cost:</strong> Potentially free for low traffic, but unpredictable costs if the site grows.</p>
+
+<h3>Option E: No-Code Tools (Airtable + Softr / Stacker)</h3>
+
+<div class="info-box">
+  <p><strong>What it is:</strong> Use Airtable (a fancy spreadsheet) as your database, and a tool like Softr or Stacker to automatically generate a website from it &mdash; including maps.</p>
+</div>
+
+<p><strong>Pros:</strong></p>
+<ul>
+  <li>You can update data in a spreadsheet interface</li>
+  <li>No coding at all</li>
+  <li>Map view built in</li>
+</ul>
+
+<p><strong>Cons:</strong></p>
+<ul>
+  <li>Monthly costs add up: Airtable free + Softr from &pound;40/month</li>
+  <li>Less customisation than a custom-built site</li>
+  <li>Locked into their platform</li>
+</ul>
+
+<p><strong>Estimated cost:</strong> &pound;0&ndash;480/year depending on tier.</p>
+
+<h3>Comparison Summary</h3>
+
+<table>
+  <tr>
+    <th>Approach</th>
+    <th>Yearly Cost</th>
+    <th>Tech Skill Needed</th>
+    <th>Customisation</th>
+    <th>You Can Update Data?</th>
+  </tr>
+  <tr>
+    <td><strong>Our approach (React + Leaflet)</strong></td>
+    <td>&pound;0&ndash;15</td>
+    <td>High (to build), None (to use)</td>
+    <td>Unlimited</td>
+    <td>Needs a developer</td>
+  </tr>
+  <tr>
+    <td>WordPress + plugin</td>
+    <td>&pound;50&ndash;200</td>
+    <td>Low&ndash;Medium</td>
+    <td>Good</td>
+    <td>Yes, yourself</td>
+  </tr>
+  <tr>
+    <td>Google My Maps</td>
+    <td>&pound;0</td>
+    <td>None</td>
+    <td>Very limited</td>
+    <td>Yes, yourself</td>
+  </tr>
+  <tr>
+    <td>Squarespace/Wix</td>
+    <td>&pound;144&ndash;360</td>
+    <td>None</td>
+    <td>Medium (map is limited)</td>
+    <td>Yes, for content (not map)</td>
+  </tr>
+  <tr>
+    <td>Mapbox/Google Maps custom</td>
+    <td>&pound;0&ndash;??? (usage-based)</td>
+    <td>High</td>
+    <td>Unlimited</td>
+    <td>Needs a developer</td>
+  </tr>
+  <tr>
+    <td>Airtable + Softr</td>
+    <td>&pound;0&ndash;480</td>
+    <td>Low</td>
+    <td>Medium</td>
+    <td>Yes, yourself</td>
+  </tr>
+</table>
+
+<!-- ==================== 8. KEEPING DATA UP TO DATE ==================== -->
+<h2>8. Keeping the Data Up to Date</h2>
+
+<p>One important question is: how do you add new opportunities or update existing ones?</p>
+
+<h3>With Our Current Approach</h3>
+
+<p>Right now, the data is "baked in" to the website. This means:</p>
+<ol>
+  <li>You update your Google Sheet as usual</li>
+  <li>Export it again (as CSV or KML)</li>
+  <li>Someone with technical knowledge runs the geocoding script to process new entries</li>
+  <li>The website is rebuilt and re-deployed (takes about 30 seconds once set up)</li>
+</ol>
+
+<p>This could potentially be automated so that the website rebuilds itself whenever you update the spreadsheet, but that would require some additional setup.</p>
+
+<h3>Making It Easier</h3>
+
+<p>If ease of updating is important (which it probably is, since you'll be adding new opportunities), here are some options:</p>
+
+<ul>
+  <li><strong>Automated pipeline:</strong> Connect Google Sheets directly to the website build process. When you update the sheet, the site rebuilds automatically. Requires initial setup by a developer, but then works hands-off.</li>
+  <li><strong>Simple admin page:</strong> Build a basic form where you can add/edit opportunities through a web interface. This adds complexity but makes updates very easy.</li>
+  <li><strong>WordPress approach:</strong> Use the WordPress admin panel to manage entries. Familiar interface, no coding needed for updates.</li>
+</ul>
+
+<!-- ==================== 9. RECOMMENDATIONS ==================== -->
+<h2>9. Recommendations</h2>
+
+<h3>For the Grant Application</h3>
+
+<div class="info-box green">
+  <p><strong>What to say in your application:</strong> You have a working prototype that demonstrates the concept. The technology is entirely free and open-source. The grant money would go towards:</p>
+  <ul>
+    <li>Professional development / polish of the website (&pound;500&ndash;800)</li>
+    <li>Domain name registration (&pound;15/year)</li>
+    <li>Data cleanup and verification (&pound;100&ndash;200)</li>
+    <li>Setting up an automated update pipeline (&pound;100&ndash;200)</li>
+  </ul>
+  <p>You can point to the prototype as proof that the project is feasible and already underway.</p>
+</div>
+
+<h3>Our Suggestion: Keep the Current Approach</h3>
+
+<p>Given your situation, we'd recommend sticking with the approach we've already prototyped (React + Leaflet, static site), because:</p>
+
+<ol>
+  <li><strong>It's already built.</strong> The hard part is done. The prototype works and shows 918 opportunities.</li>
+  <li><strong>Zero ongoing costs.</strong> Hosting on Netlify or GitHub Pages is free forever. You only pay ~&pound;15/year for a domain name.</li>
+  <li><strong>No server maintenance.</strong> Static sites don't break, don't get hacked, and don't need updates. Once it's deployed, it just works.</li>
+  <li><strong>Best user experience.</strong> The interactive features (proximity search, linked map and table, type-based icons) are far richer than what any WordPress plugin or Google My Maps can offer.</li>
+  <li><strong>Grant-friendly.</strong> You can demonstrate that the technology costs are &pound;0 and show that the money would go entirely towards development and data quality.</li>
+</ol>
+
+<h3>If You Want to Go Simpler</h3>
+
+<p>If the grant doesn't work out and you want something with zero developer involvement:</p>
+
+<ol>
+  <li><strong>Quick win:</strong> Use Google My Maps. Import your spreadsheet, get a basic map in an hour. Free, but limited.</li>
+  <li><strong>Middle ground:</strong> Use WordPress with a map plugin. Costs ~&pound;100/year but you can manage everything yourself.</li>
+</ol>
+
+<!-- ==================== 10. GLOSSARY ==================== -->
+<h2>10. Glossary</h2>
+
+<p>Here's a reference for the technical terms used in this document:</p>
+
+<table>
+  <tr>
+    <th>Term</th>
+    <th>What It Means</th>
+  </tr>
+  <tr>
+    <td><strong>API</strong></td>
+    <td>Application Programming Interface. A way for one piece of software to talk to another. Like a waiter in a restaurant &mdash; you tell the waiter what you want, they go to the kitchen, and bring back your food. You don't need to know how the kitchen works.</td>
+  </tr>
+  <tr>
+    <td><strong>Browser</strong></td>
+    <td>The program you use to visit websites: Chrome, Safari, Firefox, Edge, etc.</td>
+  </tr>
+  <tr>
+    <td><strong>Build</strong></td>
+    <td>The process of converting source code into the files that a browser can understand. Like pressing "Export" on a project.</td>
+  </tr>
+  <tr>
+    <td><strong>Client-side</strong></td>
+    <td>Things that happen in the visitor's browser, on their own computer. Our website is entirely client-side.</td>
+  </tr>
+  <tr>
+    <td><strong>CSV</strong></td>
+    <td>Comma-Separated Values. A simple file format for spreadsheet data. When you download a Google Sheet, you can save it as CSV.</td>
+  </tr>
+  <tr>
+    <td><strong>Deploy</strong></td>
+    <td>Putting the website live so people can visit it. Like publishing a track &mdash; moving it from your studio to Spotify.</td>
+  </tr>
+  <tr>
+    <td><strong>Domain name</strong></td>
+    <td>The web address people type in, like <em>bbc.co.uk</em> or <em>ukmusicexperiences.co.uk</em>.</td>
+  </tr>
+  <tr>
+    <td><strong>Framework</strong></td>
+    <td>A pre-built set of tools that makes building software easier. Like using a DAW (Logic, Ableton) instead of recording directly to tape.</td>
+  </tr>
+  <tr>
+    <td><strong>Geocoding</strong></td>
+    <td>Converting a human-readable address (e.g., "Bristol") into map coordinates (51.4545, -2.5879) that a map can plot.</td>
+  </tr>
+  <tr>
+    <td><strong>Git / GitHub</strong></td>
+    <td>A version control system and its online platform. It keeps track of every change ever made to the code, like unlimited undo. GitHub is where the code lives online.</td>
+  </tr>
+  <tr>
+    <td><strong>Hosting</strong></td>
+    <td>A service that stores your website files and serves them to visitors. Like a venue for your website to "perform" in.</td>
+  </tr>
+  <tr>
+    <td><strong>HTML</strong></td>
+    <td>HyperText Markup Language. The basic building blocks of every web page &mdash; defines the structure and content.</td>
+  </tr>
+  <tr>
+    <td><strong>JavaScript</strong></td>
+    <td>The programming language that makes websites interactive. It runs in the browser and powers things like our search filters and map interactions.</td>
+  </tr>
+  <tr>
+    <td><strong>JSON</strong></td>
+    <td>JavaScript Object Notation. A way to store structured data that computers can easily read. Think of it as a very organised spreadsheet.</td>
+  </tr>
+  <tr>
+    <td><strong>KML</strong></td>
+    <td>Keyhole Markup Language. A file format for geographic data, used by Google Earth and Google Maps. Your map data was exported in this format.</td>
+  </tr>
+  <tr>
+    <td><strong>Leaflet</strong></td>
+    <td>A free, open-source JavaScript library for interactive maps. The engine behind our map.</td>
+  </tr>
+  <tr>
+    <td><strong>Open source</strong></td>
+    <td>Software whose code is freely available for anyone to use, modify, and share. Most of the internet runs on open-source software.</td>
+  </tr>
+  <tr>
+    <td><strong>React</strong></td>
+    <td>A free tool (by Meta/Facebook) for building interactive websites. The most popular choice for modern web development.</td>
+  </tr>
+  <tr>
+    <td><strong>Server</strong></td>
+    <td>A computer that's always on and connected to the internet, serving your website to visitors.</td>
+  </tr>
+  <tr>
+    <td><strong>SSL</strong></td>
+    <td>Secure Sockets Layer. The technology that puts the padlock icon in your browser and makes web addresses start with "https://". Encrypts data between the visitor and the website.</td>
+  </tr>
+  <tr>
+    <td><strong>Static site</strong></td>
+    <td>A website made of fixed files that don't change based on who's visiting. Fast, secure, and cheap to host.</td>
+  </tr>
+  <tr>
+    <td><strong>TypeScript</strong></td>
+    <td>An improved version of JavaScript with built-in error checking. Like having spell-check for code.</td>
+  </tr>
+  <tr>
+    <td><strong>Vite</strong></td>
+    <td>A build tool that packages website code for production. Fast and modern.</td>
+  </tr>
+</table>
+
+<!-- ==================== FOOTER ==================== -->
+<div class="footer">
+  <p>
+    This document was generated by <strong>Claude Code</strong> (Anthropic's AI coding assistant).<br>
+    Based on the UK Music Experiences prototype built by Robert, March 2026.<br>
+    All cost estimates are approximate and based on UK market rates as of March 2026.
+  </p>
+</div>
+
+</body>
+</html>
