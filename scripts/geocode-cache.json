@@ -28,9 +28,9 @@
   "west Berkshire Music Centre": null,
   "reading Music Centre, Reading": null,
   "Newlands girls school, Newlands Leisure Centre, Farm Rd, Maidenhead SL6 5JB": null,
-  "<![CDATA[CultureMix Arts & Music Centre - UK]]>": null,
+  "CultureMix Arts & Music Centre - UK": null,
   "Cippenham School, Elmshott Lane, Cippenham, Slough": null,
-  "<![CDATA[cultureMix Arts & Music Centre - UK]]>": null,
+  "cultureMix Arts & Music Centre - UK": null,
   "Cornwall": {
     "lat": 50.4433489,
     "lng": -4.6246566
@@ -89,7 +89,7 @@
     "lat": 50.4373237,
     "lng": -3.694009
   },
-  "<![CDATA[People's Parkfield, Paignton - UK]]>": null,
+  "People's Parkfield, Paignton - UK": null,
   "Paignton Library, Paignton": {
     "lat": 50.4338002,
     "lng": -3.5659343
@@ -177,7 +177,7 @@
     "lng": -4.095488
   },
   "The GateWay, Addlewell Ln, Yeovil BA20 1QN": null,
-  "<![CDATA[Newton Abbott Children's Centre - UK]]>": null,
+  "Newton Abbott Children's Centre - UK": null,
   "Radstock Youth Club": null,
   "43 Ducie Rd, Barton Hill, Bristol BS5 0AX": {
     "lat": 51.4562228,
@@ -273,7 +273,7 @@
     "lat": 50.8498933,
     "lng": -0.1380867
   },
-  "<![CDATA[Priory School & Performing Arts Centre, Lewes - UK]]>": null,
+  "Priory School & Performing Arts Centre, Lewes - UK": null,
   "Ratton School, Eastbourne": {
     "lat": 50.7908533,
     "lng": 0.2595634
@@ -282,8 +282,8 @@
     "lat": 50.7908533,
     "lng": 0.2595634
   },
-  "<![CDATA[St Richard's Catholic College, Bexhill-on-Sea - UK]]>": null,
-  "<![CDATA[priory School & Performing Arts Centre, Lewes - UK]]>": null,
+  "St Richard's Catholic College, Bexhill-on-Sea - UK": null,
+  "priory School & Performing Arts Centre, Lewes - UK": null,
   "East Sussex": {
     "lat": 50.9404266,
     "lng": 0.3699978
@@ -296,7 +296,7 @@
     "lat": 51.7517915,
     "lng": -2.238696
   },
-  "<![CDATA[Sir Thomas Rich's School, Oakleaze - UK]]>": null,
+  "Sir Thomas Rich's School, Oakleaze - UK": null,
   "St Whites Primary School, Cinderford": null,
   "Cheltenham Bournside School, Cheltenham": {
     "lat": 51.8861864,
@@ -357,8 +357,8 @@
     "lng": 0.2313681
   },
   "Hounslow Town Primary School, School Road": null,
-  "<![CDATA[Isleworth & Syon School for Boys, Ridgeway Rd, Isleworth TW7 5LJ - UK]]>": null,
-  "<![CDATA[Isleworth &Syon School for Boys, Ridgeway Rd, Isleworth TW7 5LJ - UK]]>": null,
+  "Isleworth & Syon School for Boys, Ridgeway Rd, Isleworth TW7 5LJ - UK": null,
+  "Isleworth &Syon School for Boys, Ridgeway Rd, Isleworth TW7 5LJ - UK": null,
   "The Music Centre, 64a Pears Road, Hounslow, TW3 1SR": null,
   "Highbury Roundhouse, London": {
     "lat": 51.5516275,
@@ -381,7 +381,7 @@
     "lat": 51.5057791,
     "lng": -0.116787
   },
-  "<![CDATA[Tiffin Girls' School, London - UK]]>": null,
+  "Tiffin Girls' School, London - UK": null,
   "College Creative Industries Centre, Kingston upon Thames KT2 5BP": null,
   "Coombe Music Centre, Kingston": null,
   "Kingston, London": {
@@ -408,7 +408,7 @@
     "lng": -0.0198466
   },
   "Soundwave, Mitcham": null,
-  "<![CDATA[St John's Church, High Path - UK]]>": null,
+  "St John's Church, High Path - UK": null,
   "Wimbledon College, Edge Hill, Wimbledon": {
     "lat": 51.4186675,
     "lng": -0.2209119
@@ -447,7 +447,7 @@
     "lat": 51.4395559,
     "lng": -0.3523925
   },
-  "<![CDATA[St Saviour's and St Olave's School, New Kent Road,  SE1 4AN - UK]]>": null,
+  "St Saviour's and St Olave's School, New Kent Road,  SE1 4AN - UK": null,
   "St. Cecilia’s Church Of England School\nSutherland Grove\nLondon SW18 5JR": {
     "lat": 51.446906,
     "lng": -0.2088048
@@ -463,7 +463,7 @@
     "lng": -0.2134826
   },
   "Cognus Limited, Cantium House, Railway Approach, Wallington, SM6 ODZ": null,
-  "<![CDATA[St Andrew's Church, Sutton - UK]]>": null,
+  "St Andrew's Church, Sutton - UK": null,
   "Sutton Central Library": {
     "lat": 51.3620174,
     "lng": -0.1953016
@@ -477,7 +477,7 @@
     "lng": -0.0514541
   },
   "Spotlight Youth Centre, Langdon Park": null,
-  "<![CDATA[St.Paul's Way Trust School, Tower Hamlets - UK]]>": null,
+  "St.Paul's Way Trust School, Tower Hamlets - UK": null,
   "The Albany, Deptford": {
     "lat": 51.4777262,
     "lng": -0.0276162
@@ -538,7 +538,7 @@
     "lng": -1.4925422
   },
   "Perins Community School, Arlesford": null,
-  "<![CDATA[Queen Mary's College, Basingstoke - UK]]>": null,
+  "Queen Mary's College, Basingstoke - UK": null,
   "The Mountbatten School. Romsey": {
     "lat": 50.9827682,
     "lng": -1.4704178
@@ -570,7 +570,7 @@
     "lat": 50.8056764,
     "lng": -1.0581891
   },
-  "<![CDATA[St Paul's Catholic Primary School, Portsmouth - UK]]>": null,
+  "St Paul's Catholic Primary School, Portsmouth - UK": null,
   "Mayflower Studios, Southampton": {
     "lat": 50.9080982,
     "lng": -1.4041588
@@ -610,18 +610,18 @@
   "The Department, Ryde": null,
   "Locking Castle and Locking Children’s Centre, The Campus, Highlands Lane, Worle, Weston-Super-Mare, BS24 7DX": null,
   "Centre for Music, Bayswater Road, Headington": null,
-  "<![CDATA[St Mary's C of E Primary School, Banbury - UK]]>": null,
+  "St Mary's C of E Primary School, Banbury - UK": null,
   "West Oxford primary School, Oxford": {
     "lat": 51.7510519,
     "lng": -1.2757383
   },
-  "<![CDATA[St Andrew's Primary School, Oxford - UK]]>": null,
+  "St Andrew's Primary School, Oxford - UK": null,
   "Executive Lounge, Didcot Town Football Club, Didcot": null,
   "Wood Green School, Witney": {
     "lat": 51.7909359,
     "lng": -1.4704594
   },
-  "<![CDATA[St Edburg's School, Bicester - UK]]>": null,
+  "St Edburg's School, Bicester - UK": null,
   "centre for Music, Bayswater Road, Headington": null,
   "Thame Library, Thame": {
     "lat": 51.7474711,
@@ -632,7 +632,7 @@
     "lat": 50.975524,
     "lng": -3.2267584
   },
-  "<![CDATA[St Peter's Church, Wrecclesham - UK]]>": null,
+  "St Peter's Church, Wrecclesham - UK": null,
   "Farnham Music and Drama, Tilford Road": {
     "lat": 51.2083678,
     "lng": -0.7885762
@@ -641,12 +641,12 @@
     "lat": 51.2117322,
     "lng": -0.7975944
   },
-  "<![CDATA[St Peter's Catholic school. Guildford - UK]]>": null,
+  "St Peter's Catholic school. Guildford - UK": null,
   "Westfield Primary School, Woking": {
     "lat": 51.300162,
     "lng": -0.5666914
   },
-  "<![CDATA[St Bede's School, Redhill - UK]]>": null,
+  "St Bede's School, Redhill - UK": null,
   "Cordwalles Junior School, Camberley": {
     "lat": 51.3496906,
     "lng": -0.7243255
@@ -665,7 +665,7 @@
     "lat": 51.2123117,
     "lng": -0.5430339
   },
-  "<![CDATA[Christ's College, Larch Avenue, Guildford - UK]]>": null,
+  "Christ's College, Larch Avenue, Guildford - UK": null,
   "United Kingdom": {
     "lat": 54.7023545,
     "lng": -3.2765753
@@ -673,7 +673,7 @@
   "": null,
   "Horsham Music Centre": null,
   "The Phoenis Centre, Bognor Regis": null,
-  "<![CDATA[St Joseph's CE Junior School, Chichester - UK]]>": null,
+  "St Joseph's CE Junior School, Chichester - UK": null,
   "The Mill Primary Academy, Ifield, Crawley": {
     "lat": 51.1167391,
     "lng": -0.2138604
