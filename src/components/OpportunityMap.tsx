@@ -1,32 +1,55 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import {
   MapContainer,
   TileLayer,
-  CircleMarker,
+  Marker,
   Circle,
   Popup,
   useMap,
 } from "react-leaflet";
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import type { OpportunityWithDistance } from "../hooks/useStoreFilter";
 
-const TYPE_COLORS: Record<string, string> = {
-  Workshop: "#FFD600",
-  Ensemble: "#9C27B0",
-  Course: "#0288D1",
-  "One-off Event": "#0F9D58",
-  "Performance Opportunity": "#C2185B",
-  "Online Resource": "#FF6D00",
-  Festival: "#E91E63",
+/** Map opportunity type → symbol filename in /public/symbols/ */
+const TYPE_TO_ICON: Record<string, string> = {
+  Classes: "Classes.png",
+  Ensemble: "Ensemble.png",
+  "Grant/Fund": "Grant-Fund.png",
+  "Instrument Lessons": "Instrument_Lessons.png",
+  Mentoring: "Mentoring.png",
+  "Music Centre": "Music_Centre.png",
+  Network: "Network.png",
+  "Performance Opportunity": "Performance_Opportunity.png",
+  Project: "Project.png",
+  Radio: "Radio.png",
+  "Work Experience": "Work_Experience.png",
+  Workshop: "Workshop.png",
 };
 
-const DEFAULT_COLOR = "#4FC3F7";
+const DEFAULT_ICON_FILE = "Unbenannt.png";
 
-function getColor(type: string): string {
-  for (const [key, color] of Object.entries(TYPE_COLORS)) {
-    if (type.toLowerCase().includes(key.toLowerCase())) return color;
-  }
-  return DEFAULT_COLOR;
+const ICON_SIZE = 28;
+const ICON_SIZE_HIGHLIGHTED = 38;
+
+const iconCache: Record<string, L.Icon> = {};
+const highlightedIconCache: Record<string, L.Icon> = {};
+
+function getIcon(type: string, highlighted: boolean): L.Icon {
+  const cache = highlighted ? highlightedIconCache : iconCache;
+  if (cache[type]) return cache[type];
+
+  const file = TYPE_TO_ICON[type] || DEFAULT_ICON_FILE;
+  const size = highlighted ? ICON_SIZE_HIGHLIGHTED : ICON_SIZE;
+  const icon = L.icon({
+    iconUrl: `${import.meta.env.BASE_URL}symbols/${file}`,
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+    popupAnchor: [0, -size / 2],
+    className: highlighted ? "marker-highlighted" : "",
+  });
+  cache[type] = icon;
+  return icon;
 }
 
 interface Props {
@@ -75,8 +98,9 @@ export default function OpportunityMap({
   flyToId,
   onFlyDone,
 }: Props) {
-  const withCoords = opportunities.filter(
-    (o) => o.lat !== null && o.lng !== null
+  const withCoords = useMemo(
+    () => opportunities.filter((o) => o.lat !== null && o.lng !== null),
+    [opportunities]
   );
 
   return (
@@ -108,16 +132,11 @@ export default function OpportunityMap({
       {withCoords.map((opp) => {
         const isHighlighted = opp.id === highlightedId;
         return (
-          <CircleMarker
+          <Marker
             key={opp.id}
-            center={[opp.lat!, opp.lng!]}
-            radius={isHighlighted ? 10 : 6}
-            pathOptions={{
-              color: isHighlighted ? "#fff" : getColor(opp.type),
-              fillColor: getColor(opp.type),
-              fillOpacity: isHighlighted ? 1 : 0.8,
-              weight: isHighlighted ? 2 : 1,
-            }}
+            position={[opp.lat!, opp.lng!]}
+            icon={getIcon(opp.type, isHighlighted)}
+            zIndexOffset={isHighlighted ? 1000 : 0}
             eventHandlers={{
               mouseover: () => onHover(opp.id),
               mouseout: () => onHover(null),
@@ -161,7 +180,7 @@ export default function OpportunityMap({
                 )}
               </div>
             </Popup>
-          </CircleMarker>
+          </Marker>
         );
       })}
     </MapContainer>

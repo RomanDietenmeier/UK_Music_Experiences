@@ -259,12 +259,21 @@ footer {
   font-size: 12px;
 }
 
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin-right: 4px;
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Highlighted marker on map */
+.marker-highlighted {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
+  z-index: 10000 !important;
 }
 
 /* Responsive: stack on small screens */

@@ -139,16 +139,25 @@ function App() {
 
       <footer>
         <div className="legend">
-          <span className="dot" style={{ background: "#FFD600" }} /> Workshop
-          <span className="dot" style={{ background: "#9C27B0" }} /> Ensemble
-          <span className="dot" style={{ background: "#0288D1" }} /> Course
-          <span className="dot" style={{ background: "#0F9D58" }} /> One-off
-          Event
-          <span className="dot" style={{ background: "#C2185B" }} /> Performance
-          <span className="dot" style={{ background: "#FF6D00" }} /> Online
-          Resource
-          <span className="dot" style={{ background: "#E91E63" }} /> Festival
-          <span className="dot" style={{ background: "#4FC3F7" }} /> Other
+          {[
+            ["Classes", "Classes.png"],
+            ["Ensemble", "Ensemble.png"],
+            ["Grant/Fund", "Grant-Fund.png"],
+            ["Instrument Lessons", "Instrument_Lessons.png"],
+            ["Mentoring", "Mentoring.png"],
+            ["Music Centre", "Music_Centre.png"],
+            ["Network", "Network.png"],
+            ["Performance Opportunity", "Performance_Opportunity.png"],
+            ["Project", "Project.png"],
+            ["Radio", "Radio.png"],
+            ["Work Experience", "Work_Experience.png"],
+            ["Workshop", "Workshop.png"],
+          ].map(([label, file]) => (
+            <span key={label} className="legend-item">
+              <img src={`${import.meta.env.BASE_URL}symbols/${file}`} alt={label} className="legend-icon" />
+              {label}
+            </span>
+          ))}
         </div>
       </footer>
     </div>
