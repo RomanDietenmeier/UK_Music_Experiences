@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -oP 'BS\\\\d+\\\\s+\\\\w+|[A-Z]{1,2}\\\\d{1,2}\\\\s+\\\\d[A-Z]{2}' \"/c/Users/roman/Documents/projects/UK_Music_Experiences/data/Music Opportunities UK.kml\")",
+      "Bash(python -c \":*)",
+      "Bash(node -e \":*)"
+    ]
+  }
+}
